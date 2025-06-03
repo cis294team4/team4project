@@ -23,6 +23,18 @@
             border-radius: 6px;
             outline: none;
         }
+
+        #search {
+            padding: 12px 20px;
+            margin-left: 10px;
+            font-size: 1em;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
         
         #faqs {
             max-width: 50%;         
@@ -102,7 +114,8 @@
 
     <!-- search bar -->
     <div class="search-bar">
-        <input type="text" id="faq-search" placeholder:"Search FAQs..."/>
+        <input type="text" id="faq-search" placeholder="Search FAQs..."/>
+        <button id="search">Search</button>
     </div>
 
     <!-- FAQ section-->
@@ -218,6 +231,29 @@
     <script>
         document.querySelector(".menu-toggle").addEventListener("click", function () {
             document.querySelector(".nav-links").classList.toggle("show");
+        });
+
+        /* FAQ search: filter*/
+        function filterFAQs() {
+            const searchTerm = document.getElementById('faq-search').value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const questionText = item.querySelector('.question').textContent.toLowerCase();
+                const answerText = item.querySelector('.answer').textContent.toLowerCase();
+                const match = questionText.includes(searchTerm) || answerText.includes(searchTerm);
+                item.style.display = match ? 'block' : 'none';
+            });
+        }
+
+        // When clicking search button
+        document.getElementById('search').addEventListener('click', filterFAQs);
+
+        // When pressing Enter
+        document.getElementById('faq-search').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                filterFAQs();
+            }
         });
 
         /* FAQ toggle.*/
