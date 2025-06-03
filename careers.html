@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marcus Perdue">
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/careers.css" />
+    <title>Insurotek</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html"><img src="imgs/logo2.png" class="logo" alt="Harmony for Schools Logo"></a>
+        <div class="menu-toggle">&#9776;</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Home Insurance</a></li>
+            <li><a href="#">Auto</a></li>
+        </ul>
+
+        <!-- Contact Button -->
+        <div class="social-icons">
+            <a href="#">Contact</a>
+
+        </div>
+    </nav>
+
+    <!-- Hero Image Section -->
+    <section class="careers-hero">
+      <div class="hero-overlay">
+        <h1 class="hero-title"></h1>
+        <p class="hero-subtitle"></p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <h2 class="section-title">Join the Insurotek Team</h2>
+        <p class="section-description">
+        We're looking for passionate professionals to help us transform the insurance industry.
+        <br>Browse our open roles and apply today.
+        </p>
+        
+        <!-- Filters -->
+        <div class="filters">
+        <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="Customer Service">Customer Service</option>
+        <option value="Sales">Sales</option>
+        <option value="Marketing">Marketing</option>
+        <option value="IT">IT</option>
+        </select>
+        <select id="locationFilter">
+        <option value="">All Locations</option>
+        <option value="Portland, OR">Portland, OR</option>
+        <option value="Seattle, WA">Seattle, WA</option>
+        <option value="Remote">Remote</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Search jobs..." />
+        </div>
+
+        <!-- Job Listings -->
+        <div class="job-listings" id="jobListings">
+        <!-- Job cards njected here by JavaScript -->
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Insurotek | All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.querySelector(".menu-toggle").addEventListener("click", function () {
+            document.querySelector(".nav-links").classList.toggle("show");
+        });
+    </script>
+
+    <!-- Javascript for Careers Search-->
+    <script src="careers.js"></script>
+
+</body>
+</html>
