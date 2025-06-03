@@ -1,0 +1,136 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: "roboto";
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Nav Bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fdfcf9;
+    padding: 15px 30px;
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    width: auto;
+    max-height: 100px;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #190050;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a:hover {
+    color: #190050;
+    border-bottom: 2px solid #190050;
+}
+
+/* Show Hamburger Menu on Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #190050;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Mobile Responsive Navigation */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* Show menu icon on mobile */
+    }
+
+    /* Hide menu by default on small screens */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #000;
+        width: 200px;
+        text-align: center;
+        padding: 15px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+}
+
+/* Main Content Section */
+.main-content {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Section Title */
+.section-title {
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1A1446;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Section Description */
+.section-description {
+    font-size: 20px;
+    color: rgb(185, 180, 180);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #1A1446;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
