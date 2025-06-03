@@ -10,6 +10,20 @@
 
     <style>
 
+        .search-bar {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #faq-search {
+            width: 30%;
+            padding: 12px;
+            font-size: 1em;
+            border: 2px solid darkblue;
+            border-radius: 6px;
+            outline: none;
+        }
+        
         #faqs {
             max-width: 50%;         
             margin: 40px auto;        
@@ -86,6 +100,12 @@
         </p>
     </section>
 
+    <!-- search bar -->
+    <div class="search-bar">
+        <input type="text" id="faq-search" placeholder:"Search FAQs..."/>
+    </div>
+
+    <!-- FAQ section-->
     <section id="faqs">
         <div class="faq-item">
             <div class="question">
