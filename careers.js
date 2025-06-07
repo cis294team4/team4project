@@ -1,7 +1,7 @@
 const jobs = [
   {
     title: "Claims Adjuster",
-    location: "Seattle, WA",
+    location: "Bend, OR",
     type: "Full-Time",
     category: "Customer Service",
     description: "Investigate insurance claims to determine liability. Ideal for someone with strong attention to detail and empathy.",
@@ -17,7 +17,7 @@ const jobs = [
   },
   {
     title: "Sales Representative",
-    location: "Portland, OR",
+    location: "Bend, OR",
     type: "Full-Time",
     category: "Sales",
     description: "Sell personalized insurance plans and grow client relationships.",
@@ -33,7 +33,7 @@ const jobs = [
   },
   {
     title: "IT Support Technician",
-    location: "Seattle, WA",
+    location: "Bend, OR",
     type: "Full-Time",
     category: "IT",
     description: "Provide day-to-day technical support for all internal departments. Hybrid position.",
@@ -41,7 +41,7 @@ const jobs = [
   },
   {
     title: "HR Generalist",
-    location: "Portland, OR",
+    location: "Bend, OR",
     type: "Full-Time",
     category: "Customer Service",
     description: "Support recruiting, onboarding, and employee engagement initiatives.",
