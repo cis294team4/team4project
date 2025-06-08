@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Marcus Perdue">
-    <link rel="stylesheet" href="css/template.css">
     <link rel="stylesheet" href="css/careers.css" />
     <title>Insurotek</title>
 </head>
@@ -13,22 +12,118 @@
 
 <!-- Navigation Bar -->
     <nav>
-        <a href="index.html"><img src="imgs/logo2.png" class="logo" alt="Harmony for Schools Logo"></a>
-        <div class="menu-toggle">&#9776;</div>
+        <a href="index.html">
+            <img src="imgs/logo2.png" class="logo" alt="InsuroTek Logo" />
+        </a>
+
+        <!-- Hamburger Toggle -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <ul class="nav-links">
             <li><a href="/index.html">Home</a></li>
-            <li><a href="/Services.html">Services</a></li>
-            <li><a href="/aboutus.html">About Us</a></li>
-            <li><a href="/faq.html">FAQ</a></li>
+            <li class="mega-dropdown">
+                <a href="javascript:void(0);" id="insurance-toggle">Insurance</a>
+                <div class="mega-menu" id="insurance-mega-menu">
+                    <div class="mega-menu-inner">
+                        <div class="mega-column">
+                            <h4>Car Insurance</h4>
+                            <ul>
+                                <li><a href="Services.html">Liability Coverage</a></li>
+                                <li><a href="Services.html">Full Coverage</a></li>
+                                <li><a href="Services.html">Roadside Assistance</a></li>
+                                <li><a href="Services.html">Uninsured Motorist</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>Home Insurance</h4>
+                            <ul>
+                                <li><a href="Services.html">Homeowners Insurance</a></li>
+                                <li><a href="Services.html">Renters Insurance</a></li>
+                                <li><a href="Services.html">Flood Coverage</a></li>
+                                <li><a href="Services.html">Fire Protection</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>Bundle & Save</h4>
+                            <ul>
+                                <li><a href="Services.html">Auto + Home Bundle</a></li>
+                                <li><a href="Services.html">Available Discounts</a></li>
+                                <li><a href="Services.html">How to File a Claim</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mega-dropdown">
+                <a href="javascript:void(0);" id="about-toggle">About Us</a>
+                <div class="mega-menu" id="about-mega-menu">
+                    <div class="mega-menu-inner">
+                        <div class="mega-column">
+                            <h4>Company Info</h4>
+                            <ul>
+                                <li><a href="/aboutus.html">Who We Are</a></li>
+                                <li><a href="/mission.html">Our Mission</a></li>
+                                <li><a href="/aboutus.html">Meet the Team</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>Opportunities</h4>
+                            <ul>
+                                <li><a href="/careers.html">Careers</a></li>
+                                <li><a href="/careers.html">Internships</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="/faq.html">FAQ</a></li>
+                                <li><a href="/contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
         </ul>
 
-        <!-- Social Media Icons -->
         <div class="social-icons">
-            <a href="/contact.html" target="_blank" class="icon">Contact Us</a>
-
+            <a href="/contact.html" class="contact-button">Contact Us</a>
         </div>
     </nav>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span class="close-btn" id="closeNav">&times;</span>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li class="accordion">
+                <button class="accordion-toggle">Insurance</button>
+                <ul class="submenu">
+                    <li><a href="Services.html">Liability Coverage</a></li>
+                    <li><a href="Services.html">Full Coverage</a></li>
+                    <li><a href="Services.html">Roadside Assistance</a></li>
+                    <li><a href="Services.html">Uninsured Motorist</a></li>
+                    <li><a href="Services.html">Homeowners</a></li>
+                    <li><a href="Services.html">Renters</a></li>
+                </ul>
+            </li>
+            <li class="accordion">
+                <button class="accordion-toggle">About Us</button>
+                <ul class="submenu">
+                    <li><a href="/aboutus.html">Who We Are</a></li>
+                    <li><a href="/careers.html">Careers</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </li>
+            <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Image Section -->
     <section class="careers-hero">
@@ -72,14 +167,82 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Insurotek | All Rights Reserved.</p>
+     <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-column">
+                <h4>OFFICES</h4>
+                <p>Insurotek Headquarters<br>
+                    200 Beacon Way, Suite 300<br>
+                    Portland, OR 97086<br>
+                    <a href="tel:+14155552600">(503) 555-2600</a></p>
+
+                <p>Midwest Office<br>
+                    8900 Lakeshore Dr.<br>
+                    Seattle, WA 98101<br>
+                    <a href="tel:+13125559800">(206) 555-9800</a></p>
+            </div>
+
+            <div class="footer-column">
+                <h4>LINKS</h4>
+                <ul>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="/careers.html">Careers</a></li>
+                    <li><a href="/faq.html">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column social">
+                <h4>FOLLOW US</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="imgs/icons8-x.svg" alt="Twitter"></a>
+                    <a href="#"><img src="imgs/icons8-linkedin.svg" alt="LinkedIn"></a>
+                    <a href="#"><img src="imgs/icons8-facebook.svg" alt="Facebook"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Insurotek. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Web Accessibility</a>
+                <a href="#">Terms of Use</a>
+                <a href="">Compliance</a>
+            </div>
+        </div>
     </footer>
 
     <!-- JavaScript for Mobile Menu -->
     <script>
-        document.querySelector(".menu-toggle").addEventListener("click", function () {
-            document.querySelector(".nav-links").classList.toggle("show");
+        const hamburger = document.getElementById("hamburger");
+        const mobileNav = document.getElementById("mobileNav");
+        const closeNav = document.getElementById("closeNav");
+        hamburger.addEventListener("click", () => mobileNav.classList.add("show"));
+        closeNav.addEventListener("click", () => mobileNav.classList.remove("show"));
+        document.querySelectorAll(".accordion-toggle").forEach(btn =>
+            btn.addEventListener("click", () => btn.parentElement.classList.toggle("open"))
+        );
+
+        const insuranceToggle = document.getElementById("insurance-toggle");
+        const insuranceMegaMenu = document.getElementById("insurance-mega-menu");
+        const aboutToggle = document.getElementById("about-toggle");
+        const aboutMegaMenu = document.getElementById("about-mega-menu");
+        insuranceToggle.addEventListener("click", () => {
+            insuranceMegaMenu.classList.toggle("show");
+            aboutMegaMenu.classList.remove("show");
+        });
+        aboutToggle.addEventListener("click", () => {
+            aboutMegaMenu.classList.toggle("show");
+            insuranceMegaMenu.classList.remove("show");
+        });
+        document.addEventListener("click", (e) => {
+            if (!insuranceMegaMenu.contains(e.target) && e.target !== insuranceToggle) {
+                insuranceMegaMenu.classList.remove("show");
+            }
+            if (!aboutMegaMenu.contains(e.target) && e.target !== aboutToggle) {
+                aboutMegaMenu.classList.remove("show");
+            }
         });
     </script>
 
