@@ -260,11 +260,15 @@ nav {
 
 /* Hero Section */
 .hero {
-  background-color: #180050;
+  background: radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.04), transparent 25%),
+              radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.06), transparent 30%),
+              linear-gradient(135deg, #180050, #4e2fae);
   color: white;
   padding: 80px 40px;
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-container {
