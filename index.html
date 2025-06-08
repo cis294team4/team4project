@@ -1,75 +1,303 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Tabari Palmer">
-    <link rel="stylesheet" href="css/index-styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&family=Ledger&family=Sigmar&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="CIS294 Team 4" />
+    <link rel="stylesheet" href="css/index-styles.css" />
     <title>Insurotek</title>
 </head>
-<body>
 
+<body>
     <!-- Navigation Bar -->
     <nav>
-        <a href="index.html"><img src="imgs/logo2.png" class="logo" alt="Harmony for Schools Logo"></a>
-        <div class="menu-toggle">&#9776;</div>
+        <a href="index.html">
+            <img src="imgs/logo2.png" class="logo" alt="InsuroTek Logo" />
+        </a>
+
+        <!-- Hamburger Toggle -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <ul class="nav-links">
             <li><a href="/index.html">Home</a></li>
-            <li><a href="/Services.html">Services</a></li>
-            <li><a href="/aboutus.html">About Us</a></li>
-            <li><a href="/careers.html">Careers</a></li>
-            <li><a href="/faq.html">FAQ</a></li>
+            <li class="mega-dropdown">
+                <a href="javascript:void(0);" id="insurance-toggle">Insurance</a>
+                <div class="mega-menu" id="insurance-mega-menu">
+                    <div class="mega-menu-inner">
+                        <div class="mega-column">
+                            <h4>Car Insurance</h4>
+                            <ul>
+                                <li><a href="#">Liability Coverage</a></li>
+                                <li><a href="#">Full Coverage</a></li>
+                                <li><a href="#">Roadside Assistance</a></li>
+                                <li><a href="#">Uninsured Motorist</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>Home Insurance</h4>
+                            <ul>
+                                <li><a href="#">Homeowners Insurance</a></li>
+                                <li><a href="#">Renters Insurance</a></li>
+                                <li><a href="#">Flood Coverage</a></li>
+                                <li><a href="#">Fire Protection</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>Bundle & Save</h4>
+                            <ul>
+                                <li><a href="#">Auto + Home Bundle</a></li>
+                                <li><a href="#">Available Discounts</a></li>
+                                <li><a href="#">How to File a Claim</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mega-dropdown">
+                <a href="javascript:void(0);" id="about-toggle">About Us</a>
+                <div class="mega-menu" id="about-mega-menu">
+                    <div class="mega-menu-inner">
+                        <div class="mega-column">
+                            <h4>Company Info</h4>
+                            <ul>
+                                <li><a href="/aboutus.html">Who We Are</a></li>
+                                <li><a href="/mission.html">Our Mission</a></li>
+                                <li><a href="/aboutus.html">Meet the Team</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>Opportunities</h4>
+                            <ul>
+                                <li><a href="/careers.html">Careers</a></li>
+                                <li><a href="/careers.html">Internships</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="/faq.html">FAQ</a></li>
+                                <li><a href="/contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
         </ul>
 
-        <!-- Social Media Icons -->
         <div class="social-icons">
-            <a href="/contact.html" target="_blank" class="icon">Contact Us</a>
-
+            <a href="/contact.html" class="contact-button">Contact Us</a>
         </div>
     </nav>
+
+    <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span class="close-btn" id="closeNav">&times;</span>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li class="accordion">
+                <button class="accordion-toggle">Insurance</button>
+                <ul class="submenu">
+                    <li><a href="#">Liability Coverage</a></li>
+                    <li><a href="#">Full Coverage</a></li>
+                    <li><a href="#">Roadside Assistance</a></li>
+                    <li><a href="#">Uninsured Motorist</a></li>
+                    <li><a href="#">Homeowners</a></li>
+                    <li><a href="#">Renters</a></li>
+                </ul>
+            </li>
+            <li class="accordion">
+                <button class="accordion-toggle">About Us</button>
+                <ul class="submenu">
+                    <li><a href="/aboutus.html">Who We Are</a></li>
+                    <li><a href="/careers.html">Careers</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </li>
+            <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
-          <div class="hero-text">
-            <h1>OUR PURPOSE IN ACTION</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci voluptas nulla voluptatibus. Quod doloribus illum ducimus optio vitae nemo iure! Sapiente quam nostrum numquam quas, excepturi nesciunt suscipit eveniet quis!</p>
-            <button class="hero-button">See details →</button>
-            <p class="service-link">For service questions, <a href="#">START HERE</a>.</p>
-          </div>
-          <div class="hero-image">
-            <img src="imgs/test1.avif" alt="Happy People" />
-          </div>
+            <div class="hero-text">
+                <h1>Insurance that fits your life — not the other way around.</h1>
+                <p>Protect what matters most — get started today!</p>
+                <button class="hero-button">See details →</button>
+                <p class="service-link">For service questions, <a href="#">START HERE</a>.</p>
+            </div>
+            <div class="hero-image">
+                <img src="imgs/test1.avif" alt="Happy People" />
+            </div>
         </div>
-      </section>
-
-    <!-- Main Content -->
-    <section class="main-content">
-        <p class="breadcrumb"><a href="#">Home</a> › About</p>
-        <h2 class="section-title">OUR MISSION</h2>
-        <p class="section-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente exercitationem quasi laboriosam eligendi corporis reiciendis libero vel magnam eaque excepturi, illum quae mollitia aspernatur illo cupiditate adipisci! Quasi, temporibus minus.
-        </p>
     </section>
 
+    <!-- Insurance Cards -->
+    <section class="insurance-cards">
+        <h2 class="section-title">We’ve Got You Covered</h2>
+        <p class="section-description">Protect your car, your home, and your peace of mind — all in one place.</p>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="card-icon">🚗</div>
+                <h3 class="card-title">Auto Insurance</h3>
+                <p class="card-text">From liability to full coverage, protect your ride with confidence.</p>
+                <a href="/plans/full-coverage.html" class="card-button">Learn More</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🏡</div>
+                <h3 class="card-title">Home Insurance</h3>
+                <p class="card-text">Homeowners and renters — safeguard what makes your house a home.</p>
+                <a href="/plans/homeowners.html" class="card-button">Learn More</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎁</div>
+                <h3 class="card-title">Bundle & Save</h3>
+                <p class="card-text">Save more when you combine your policies into one simple plan.</p>
+                <a href="/plans/bundles.html" class="card-button">Get a Quote</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Main Content -->
+    <section class="our-mission">
+        <div class="mission-wrapper">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="mission-text">
+                At Insurotek, our mission is to make insurance simple, affordable, and human. We believe protection
+                shouldn't be complicated or costly — it should be empowering. Whether you're on the road, settling into
+                a new home, or planning for tomorrow, we're here to provide coverage that grows with your life.
+            </p>
+            <p class="mission-text">
+                Through transparent pricing, responsive service, and innovative technology, we’re redefining what it
+                means to feel secure. Because peace of mind isn’t just a policy — it’s a promise.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog-preview">
+        <div class="blog-grid">
+
+            <article class="blog-card">
+                <img src="imgs/blog-img1.jpg" alt="Understanding Auto Coverage" class="blog-img">
+                <h3 class="blog-title">Understanding Auto Coverage in 5 Minutes</h3>
+                <p class="blog-text">Get the basics of car insurance explained simply — from liability to collision and
+                    everything in between.</p>
+                <a href="#" class="read-more">Read More →</a>
+            </article>
+
+            <article class="blog-card">
+                <img src="imgs/blog-img2.jpg" alt="Home Insurance Tips" class="blog-img">
+                <h3 class="blog-title">Homeowner Hacks to Lower Your Premium</h3>
+                <p class="blog-text">Install these upgrades and learn how to make your home safer — and your insurance
+                    cheaper.</p>
+                <a href="#" class="read-more">Read More →</a>
+            </article>
+
+            <article class="blog-card">
+                <img src="imgs/blog-img3.jpg" alt="Why Bundling Works" class="blog-img">
+                <h3 class="blog-title">Why Bundling Your Policies Saves You Money</h3>
+                <p class="blog-text">Discover how combining auto and home policies can unlock big savings — and
+                    streamline your coverage.</p>
+                <a href="#" class="read-more">Read More →</a>
+            </article>
+
+        </div>
+        <div class="blog-button-wrapper">
+            <a href="#" class="btn primary">Visit the Blog</a>
+        </div>
+    </section>
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Insurotek | All Rights Reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-column">
+                <h4>OFFICES</h4>
+                <p>Insurotek Headquarters<br>
+                    200 Beacon Way, Suite 300<br>
+                    San Francisco, CA 94105<br>
+                    <a href="tel:+14155552600">(415) 555-2600</a></p>
+
+                <p>Midwest Office<br>
+                    8900 Lakeshore Dr.<br>
+                    Chicago, IL 60601<br>
+                    <a href="tel:+13125559800">(312) 555-9800</a></p>
+            </div>
+
+            <div class="footer-column">
+                <h4>LINKS</h4>
+                <ul>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="/careers.html">Careers</a></li>
+                    <li><a href="/faq.html">FAQs</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column social">
+                <h4>FOLLOW US</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="imgs/icons8-x.svg" alt="Twitter"></a>
+                    <a href="#"><img src="imgs/icons8-linkedin.svg" alt="LinkedIn"></a>
+                    <a href="#"><img src="imgs/icons8-facebook.svg" alt="Facebook"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Insurotek. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/accessibility.html">Web Accessibility</a>
+                <a href="/terms.html">Terms of Use</a>
+                <a href="/compliance.html">Compliance</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu -->
+    <!-- JavaScript for Menu Toggles -->
     <script>
-        document.querySelector(".menu-toggle").addEventListener("click", function () {
-            document.querySelector(".nav-links").classList.toggle("show");
+        const hamburger = document.getElementById("hamburger");
+        const mobileNav = document.getElementById("mobileNav");
+        const closeNav = document.getElementById("closeNav");
+        hamburger.addEventListener("click", () => mobileNav.classList.add("show"));
+        closeNav.addEventListener("click", () => mobileNav.classList.remove("show"));
+        document.querySelectorAll(".accordion-toggle").forEach(btn =>
+            btn.addEventListener("click", () => btn.parentElement.classList.toggle("open"))
+        );
+
+        const insuranceToggle = document.getElementById("insurance-toggle");
+        const insuranceMegaMenu = document.getElementById("insurance-mega-menu");
+        const aboutToggle = document.getElementById("about-toggle");
+        const aboutMegaMenu = document.getElementById("about-mega-menu");
+        insuranceToggle.addEventListener("click", () => {
+            insuranceMegaMenu.classList.toggle("show");
+            aboutMegaMenu.classList.remove("show");
+        });
+        aboutToggle.addEventListener("click", () => {
+            aboutMegaMenu.classList.toggle("show");
+            insuranceMegaMenu.classList.remove("show");
+        });
+        document.addEventListener("click", (e) => {
+            if (!insuranceMegaMenu.contains(e.target) && e.target !== insuranceToggle) {
+                insuranceMegaMenu.classList.remove("show");
+            }
+            if (!aboutMegaMenu.contains(e.target) && e.target !== aboutToggle) {
+                aboutMegaMenu.classList.remove("show");
+            }
         });
     </script>
-
 </body>
-</html>
 
-#-
+</html>
