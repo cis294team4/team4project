@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Marcus Perdue">
+    <link rel="stylesheet" href="css/index-styles.css"/>
     <link rel="stylesheet" href="css/contact.css">
-     <link rel="stylesheet" href="css/index-styles.css"/>
     <title>Insurotek</title>
 </head>
 <body>
 
 <!-- Navigation Bar -->
-   <nav>
+ <nav>
         <a href="index.html">
             <img src="imgs/logo2.png" class="logo" alt="InsuroTek Logo" />
         </a>
@@ -95,6 +95,35 @@
             <a href="/contact.html" class="contact-button">Contact Us</a>
         </div>
     </nav>
+     <!-- Mobile Fullscreen Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <span class="close-btn" id="closeNav">&times;</span>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li class="accordion">
+                <button class="accordion-toggle">Insurance</button>
+                <ul class="submenu">
+                    <li><a href="Services.html">Liability Coverage</a></li>
+                    <li><a href="Services.html">Full Coverage</a></li>
+                    <li><a href="Services.html">Roadside Assistance</a></li>
+                    <li><a href="Services.html">Uninsured Motorist</a></li>
+                    <li><a href="Services.html">Homeowners</a></li>
+                    <li><a href="Services.html">Renters</a></li>
+                </ul>
+            </li>
+            <li class="accordion">
+                <button class="accordion-toggle">About Us</button>
+                <ul class="submenu">
+                    <li><a href="/aboutus.html">Who We Are</a></li>
+                    <li><a href="/careers.html">Careers</a></li>
+                    <li><a href="/faq.html">FAQ</a></li>
+                </ul>
+            </li>
+            <li><a href="/contact.html">Contact Us</a></li>
+        </ul>
+    </div>
 
     <!-- Main Content -->
     <section class="main-content">
@@ -242,3 +271,4 @@
 
 </body>
 </html>
+
